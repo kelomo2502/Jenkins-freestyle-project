@@ -11,13 +11,20 @@ A Jenkins job represents a specific task or set of tasks that needs to be perfor
 
 Let's create our first build job
 
-1. from the dashboard menu on the left, click on new menu
+1. from the dashboard menu on the left, click on new menu and select the item type and click ok
 ![New item](/images/new-item.png)
-2. Connecting to Jenkins to source code management
-3. Create a new github repository called jenkins-scm with a README.md file
-4. Connect Jenkins to jenkins-scm  repository by pasting the repository url in the area selected below. Make sure your current branch is main
+2. Give it a description
+3. Go to source code management
+4. Select Git
+5. Add the Git project repository
+6. Speccify the branch(main)
+7. Under build triggers , select GitHub hook trigger for GITScm polling and save
+8.  
+9. Connecting to Jenkins to source code management
+. Create a new github repository called jenkins-scm with a README.md file
+1. Connect Jenkins to jenkins-scm  repository by pasting the repository url in the area selected below. Make sure your current branch is main
 ![Repo url](/images/repo-url.png)
-5. Save configuration and run "build now" to connect jenkins to our repository
+1. Save configuration and run "build now" to connect jenkins to our repository
 ![Build now ](/images/build.png)
 We have successfully connected jenkins with our github repository (jenkins-scm)
 
@@ -30,3 +37,9 @@ As engineers, we need to be able to automate things and make our work easier in 
 - Click on build trigger to configure triggering the job from GitHub webhook
 ![Build trigger](/images/imagebuild-trigger.png)
 - Create a github webhook using jenkins ip address and port
+- Copy your public ip and port 8080 /github-webhook in the
+  for example `http://98.80.68.215:8080/github-webhook/` in my own case
+- Select content-type : application/json
+- Under evens, choose Just the push event.
+- Check the active checkbox and save
+Now go ahead and make changes to your webpage
