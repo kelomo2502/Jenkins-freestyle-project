@@ -4,7 +4,7 @@ This project explains  how to configure, customize, and automate your software d
 
 ## Jenkins job
 
-In Jenkins, a job is a unit of work or a task that can be executed by the Jenkins automation server.
+In Jenkins, a job is a unit of work or task that the Jenkins automation server can execute.
 A Jenkins job represents a specific task or set of tasks that needs to be performed as part of a build or deployment process. Jobs in Jenkins are created to automate the execution of various steps such as compiling code, running tests, packaging applications, and deploying them to servers. Each Jenkins job is configured with a series of build steps, post-build actions, and other settings that define how the job should be executed.
 
 ## Creating a freestyle project
